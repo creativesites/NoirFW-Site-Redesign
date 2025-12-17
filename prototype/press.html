@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Noir Fashion Week Press Center - Media coverage, press releases, high-resolution images, and media accreditation information.">
+  <title>Press Center - Noir Fashion Week</title>
+
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="css/design-system.css">
+
+  <style>
+    /* Press-specific styles */
+    .press-kit-card {
+      background: white;
+      padding: 2rem;
+      box-shadow: var(--shadow-2);
+      transition: var(--transition-standard);
+      border-left: 4px solid var(--color-gold);
+    }
+
+    .press-kit-card:hover {
+      box-shadow: var(--shadow-3);
+      transform: translateX(8px);
+    }
+
+    .press-release {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-1);
+      transition: var(--transition-standard);
+    }
+
+    .press-release:hover {
+      box-shadow: var(--shadow-2);
+    }
+
+    .press-release-date {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--color-slate);
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .press-release-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .press-release-excerpt {
+      color: var(--color-slate);
+      margin-bottom: 1rem;
+    }
+
+    .media-logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .media-logo {
+      background: white;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100px;
+      box-shadow: var(--shadow-1);
+      transition: var(--transition-snappy);
+    }
+
+    .media-logo:hover {
+      box-shadow: var(--shadow-3);
+      transform: translateY(-4px);
+    }
+
+    .contact-card {
+      background: var(--color-charcoal);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .download-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--color-champagne);
+      color: var(--color-noir-black);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .stats-banner {
+      background: linear-gradient(135deg, var(--color-noir-black) 0%, var(--color-charcoal) 100%);
+      color: white;
+      padding: 3rem;
+      text-align: center;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .stat-box {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: var(--font-mono);
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-silver);
+    }
+
+    @media (max-width: 768px) {
+      .media-logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat-number {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">NOIR FW</a>
+
+      <ul class="navbar-menu">
+        <li><a href="index.html" class="navbar-link">Home</a></li>
+        <li><a href="schedule.html" class="navbar-link">Schedule</a></li>
+        <li><a href="designers.html" class="navbar-link">Designers</a></li>
+        <li><a href="archive.html" class="navbar-link">Archive</a></li>
+        <li><a href="press.html" class="navbar-link">Press</a></li>
+        <li><a href="index.html#contact" class="navbar-link">Contact</a></li>
+      </ul>
+
+      <button class="navbar-mobile-toggle" aria-label="Toggle mobile menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="min-height: 60vh;">
+    <div class="hero-background">
+      <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #2D2D2D 0%, #000000 100%);"></div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="caption text-gold mb-md">Media Center</p>
+      <h1 class="hero-title">Press</h1>
+      <p class="hero-subtitle">News, media kits, and press resources</p>
+    </div>
+  </section>
+
+  <!-- STATS BANNER -->
+  <section class="stats-banner">
+    <div class="container-standard">
+      <h2 class="h2 mb-md">Our Reach</h2>
+      <p class="body-large" style="color: var(--color-silver);">Noir Fashion Week's impact in numbers</p>
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="stat-number">2.5M+</div>
+          <div class="stat-label">Social Media Impressions</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">150+</div>
+          <div class="stat-label">Media Outlets</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Press Attendees</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Countries Reached</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESS KITS -->
+  <section class="section bg-ghost">
+    <div class="container-standard">
+      <div class="text-center mb-4xl">
+        <p class="caption text-gold mb-md">Download Assets</p>
+        <h2 class="h1 mb-lg">Press Kits</h2>
+        <p class="body-large text-gray">High-resolution images, logos, and media materials</p>
+      </div>
+
+      <div class="grid grid-2 gap-xl">
+        <div class="press-kit-card fade-in-up">
+          <span class="download-badge mb-lg">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            45 MB ZIP
+          </span>
+          <h3 class="h3 mb-md">SS 2026 Media Kit</h3>
+          <p class="body-small text-gray mb-lg">
+            Complete press kit for Spring/Summer 2026 including designer bios, high-res runway photos, event schedule, and brand assets.
+          </p>
+          <a href="#" class="btn btn-primary">Download Kit</a>
+        </div>
+
+        <div class="press-kit-card fade-in-up">
+          <span class="download-badge mb-lg">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            12 MB ZIP
+          </span>
+          <h3 class="h3 mb-md">Brand Assets</h3>
+          <p class="body-small text-gray mb-lg">
+            Official Noir Fashion Week logos, brand guidelines, color palettes, and typography specifications for media use.
+          </p>
+          <a href="#" class="btn btn-primary">Download Assets</a>
+        </div>
+
+        <div class="press-kit-card fade-in-up">
+          <span class="download-badge mb-lg">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            3 MB PDF
+          </span>
+          <h3 class="h3 mb-md">Fact Sheet</h3>
+          <p class="body-small text-gray mb-lg">
+            Key facts, statistics, and information about Noir Fashion Week, our mission, history, and impact on the fashion industry.
+          </p>
+          <a href="#" class="btn btn-primary">Download PDF</a>
+        </div>
+
+        <div class="press-kit-card fade-in-up">
+          <span class="download-badge mb-lg">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            28 MB ZIP
+          </span>
+          <h3 class="h3 mb-md">Designer Headshots</h3>
+          <p class="body-small text-gray mb-lg">
+            Professional headshots and portraits of all SS 2026 featured designers in high resolution for editorial use.
+          </p>
+          <a href="#" class="btn btn-primary">Download Photos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESS RELEASES -->
+  <section class="section bg-white">
+    <div class="container-standard">
+      <div class="text-center mb-4xl">
+        <p class="caption text-gold mb-md">Latest News</p>
+        <h2 class="h1 mb-lg">Press Releases</h2>
+      </div>
+
+      <div style="max-width: 900px; margin: 0 auto;">
+        <article class="press-release fade-in-up">
+          <p class="press-release-date">December 10, 2025</p>
+          <h3 class="press-release-title">Noir Fashion Week Announces Spring/Summer 2026 Designer Lineup</h3>
+          <p class="press-release-excerpt">
+            Noir Fashion Week is proud to announce the official designer roster for the upcoming Spring/Summer 2026 season, featuring 50+ designers from around the globe...
+          </p>
+          <a href="#" class="btn-tertiary">Read More →</a>
+        </article>
+
+        <article class="press-release fade-in-up">
+          <p class="press-release-date">November 22, 2025</p>
+          <h3 class="press-release-title">Partnership Announcement: Noir FW x Luxury Brand Collaborations</h3>
+          <p class="press-release-excerpt">
+            We're excited to announce new partnerships with leading luxury brands to support emerging designers and expand our global platform...
+          </p>
+          <a href="#" class="btn-tertiary">Read More →</a>
+        </article>
+
+        <article class="press-release fade-in-up">
+          <p class="press-release-date">October 15, 2025</p>
+          <h3 class="press-release-title">Fall/Winter 2025 Wrap-Up: Record-Breaking Attendance and Media Coverage</h3>
+          <p class="press-release-excerpt">
+            Noir Fashion Week Fall/Winter 2025 concluded with unprecedented success, drawing over 10,000 attendees and coverage from 150+ international media outlets...
+          </p>
+          <a href="#" class="btn-tertiary">Read More →</a>
+        </article>
+
+        <article class="press-release fade-in-up">
+          <p class="press-release-date">September 8, 2025</p>
+          <h3 class="press-release-title">Sustainability Initiative: Noir FW's Commitment to Eco-Conscious Fashion</h3>
+          <p class="press-release-excerpt">
+            As part of our ongoing commitment to sustainability, Noir Fashion Week introduces new initiatives to support eco-conscious designers and reduce environmental impact...
+          </p>
+          <a href="#" class="btn-tertiary">Read More →</a>
+        </article>
+      </div>
+
+      <div class="text-center mt-3xl">
+        <a href="#" class="btn btn-secondary-dark btn-large">View All Press Releases</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA COVERAGE -->
+  <section class="section bg-smoke">
+    <div class="container-standard">
+      <div class="text-center mb-4xl">
+        <p class="caption text-gold mb-md">As Seen In</p>
+        <h2 class="h1 mb-lg">Media Coverage</h2>
+        <p class="body-large text-gray">Trusted by leading fashion and lifestyle publications worldwide</p>
+      </div>
+
+      <div class="media-logo-grid">
+        <div class="media-logo">
+          <svg width="100" height="30" viewBox="0 0 100 30">
+            <text x="50" y="20" text-anchor="middle" fill="#000" font-family="Arial" font-size="14" font-weight="bold">VOGUE</text>
+          </svg>
+        </div>
+        <div class="media-logo">
+          <svg width="100" height="30" viewBox="0 0 100 30">
+            <text x="50" y="20" text-anchor="middle" fill="#000" font-family="Arial" font-size="14" font-weight="bold">FORBES</text>
+          </svg>
+        </div>
+        <div class="media-logo">
+          <svg width="100" height="30" viewBox="0 0 100 30">
+            <text x="50" y="20" text-anchor="middle" fill="#000" font-family="Arial" font-size="14" font-weight="bold">ESSENCE</text>
+          </svg>
+        </div>
+        <div class="media-logo">
+          <svg width="100" height="30" viewBox="0 0 100 30">
+            <text x="50" y="20" text-anchor="middle" fill="#000" font-family="Arial" font-size="14" font-weight="bold">WWD</text>
+          </svg>
+        </div>
+        <div class="media-logo">
+          <svg width="100" height="30" viewBox="0 0 100 30">
+            <text x="50" y="20" text-anchor="middle" fill="#000" font-family="Arial" font-size="14" font-weight="bold">ELLE</text>
+          </svg>
+        </div>
+        <div class="media-logo">
+          <svg width="100" height="30" viewBox="0 0 100 30">
+            <text x="50" y="20" text-anchor="middle" fill="#000" font-family="Arial" font-size="14" font-weight="bold">GQ</text>
+          </svg>
+        </div>
+        <div class="media-logo">
+          <svg width="100" height="30" viewBox="0 0 100 30">
+            <text x="50" y="20" text-anchor="middle" fill="#000" font-family="Arial" font-size="14" font-weight="bold">HARPER'S</text>
+          </svg>
+        </div>
+        <div class="media-logo">
+          <svg width="100" height="30" viewBox="0 0 100 30">
+            <text x="50" y="20" text-anchor="middle" fill="#000" font-family="Arial" font-size="14" font-weight="bold">THE CUT</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA ACCREDITATION -->
+  <section class="section bg-white">
+    <div class="container-standard">
+      <div class="grid grid-2 gap-4xl" style="align-items: center;">
+        <div class="fade-in-up">
+          <p class="caption text-gold mb-md">Media Accreditation</p>
+          <h2 class="h1 mb-xl">Cover Noir Fashion Week</h2>
+          <p class="body-large mb-lg text-gray">
+            We welcome credentialed media professionals to cover Noir Fashion Week. Apply for press accreditation to access runway shows, designer interviews, and exclusive events.
+          </p>
+          <ul style="list-style: none; margin-bottom: 2rem;">
+            <li class="mb-md" style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0; color: var(--color-gold);">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Access to all runway shows and presentations</span>
+            </li>
+            <li class="mb-md" style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0; color: var(--color-gold);">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Priority seating for press photographers</span>
+            </li>
+            <li class="mb-md" style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0; color: var(--color-gold);">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Exclusive designer interviews and backstage access</span>
+            </li>
+            <li class="mb-md" style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0; color: var(--color-gold);">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>High-resolution image downloads</span>
+            </li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-large">Apply for Accreditation</a>
+        </div>
+
+        <div class="contact-card fade-in-up">
+          <h3 class="h3 mb-md">Press Contact</h3>
+          <p class="body-small" style="color: var(--color-silver); margin-bottom: 2rem;">
+            For media inquiries, interview requests, or additional information, please contact our press team.
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>press@noirfw.com</span>
+            </div>
+            <div class="contact-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>(212) 555-NOIR</span>
+            </div>
+            <div class="contact-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>New York, NY</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-noir-black text-white" style="padding: var(--space-4xl) 0 var(--space-xl) 0;">
+    <div class="container">
+      <div class="grid grid-4 gap-xl mb-4xl">
+        <div>
+          <h4 class="h4 mb-lg">NOIR FW</h4>
+          <p class="body-small" style="color: var(--color-silver);">
+            Celebrating diversity and excellence in fashion since 2020.
+          </p>
+        </div>
+
+        <div>
+          <h5 class="caption mb-lg">Quick Links</h5>
+          <ul style="list-style: none;">
+            <li class="mb-sm"><a href="schedule.html" class="body-small" style="color: var(--color-silver);">Schedule</a></li>
+            <li class="mb-sm"><a href="designers.html" class="body-small" style="color: var(--color-silver);">Designers</a></li>
+            <li class="mb-sm"><a href="archive.html" class="body-small" style="color: var(--color-silver);">Archive</a></li>
+            <li class="mb-sm"><a href="press.html" class="body-small" style="color: var(--color-silver);">Press</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="caption mb-lg">Get Involved</h5>
+          <ul style="list-style: none;">
+            <li class="mb-sm"><a href="#apply" class="body-small" style="color: var(--color-silver);">Designer Application</a></li>
+            <li class="mb-sm"><a href="#tickets" class="body-small" style="color: var(--color-silver);">Buy Tickets</a></li>
+            <li class="mb-sm"><a href="#volunteer" class="body-small" style="color: var(--color-silver);">Volunteer</a></li>
+            <li class="mb-sm"><a href="#partner" class="body-small" style="color: var(--color-silver);">Become a Partner</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="caption mb-lg">Follow Us</h5>
+          <ul style="list-style: none;">
+            <li class="mb-sm"><a href="#" class="body-small" style="color: var(--color-silver);">Instagram</a></li>
+            <li class="mb-sm"><a href="#" class="body-small" style="color: var(--color-silver);">Twitter</a></li>
+            <li class="mb-sm"><a href="#" class="body-small" style="color: var(--color-silver);">Facebook</a></li>
+            <li class="mb-sm"><a href="#" class="body-small" style="color: var(--color-silver);">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center pt-xl" style="border-top: 1px solid var(--color-graphite);">
+        <p class="body-small" style="color: var(--color-silver);">
+          &copy; 2025 Noir Fashion Week. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

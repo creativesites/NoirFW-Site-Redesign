@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the visionary designers showcasing at Noir Fashion Week SS 2026. Explore collections, designer profiles, and exclusive interviews.">
+  <title>Designers - Noir Fashion Week Spring/Summer 2026</title>
+
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="css/design-system.css">
+
+  <style>
+    /* Designer-specific styles */
+    .designer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .designer-card {
+      position: relative;
+      overflow: hidden;
+      background: white;
+      transition: var(--transition-standard);
+    }
+
+    .designer-card:hover {
+      box-shadow: var(--shadow-4);
+      transform: translateY(-8px);
+    }
+
+    .designer-image-wrapper {
+      position: relative;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+    }
+
+    .designer-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition-smooth);
+    }
+
+    .designer-card:hover .designer-image {
+      transform: scale(1.08);
+    }
+
+    .designer-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%);
+      padding: 2rem 1.5rem 1.5rem;
+      color: white;
+    }
+
+    .designer-info {
+      padding: 1.5rem;
+    }
+
+    .designer-specialty {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: var(--color-champagne);
+      color: var(--color-noir-black);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .search-filter-bar {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      box-shadow: var(--shadow-2);
+    }
+
+    .search-box {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .search-input {
+      flex: 1;
+      min-width: 250px;
+      padding: 1rem 1.5rem;
+      border: 2px solid var(--color-silver);
+      font-size: 1rem;
+      transition: var(--transition-standard);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--color-gold);
+    }
+
+    .filter-tags {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .filter-tag {
+      padding: 0.5rem 1rem;
+      background: var(--color-smoke);
+      border: 2px solid transparent;
+      color: var(--color-noir-black);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--transition-snappy);
+    }
+
+    .filter-tag:hover,
+    .filter-tag.active {
+      border-color: var(--color-gold);
+      background: var(--color-gold);
+    }
+
+    @media (max-width: 768px) {
+      .designer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .search-box {
+        flex-direction: column;
+      }
+
+      .search-input {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">NOIR FW</a>
+
+      <ul class="navbar-menu">
+        <li><a href="index.html" class="navbar-link">Home</a></li>
+        <li><a href="schedule.html" class="navbar-link">Schedule</a></li>
+        <li><a href="designers.html" class="navbar-link">Designers</a></li>
+        <li><a href="archive.html" class="navbar-link">Archive</a></li>
+        <li><a href="press.html" class="navbar-link">Press</a></li>
+        <li><a href="index.html#contact" class="navbar-link">Contact</a></li>
+      </ul>
+
+      <button class="navbar-mobile-toggle" aria-label="Toggle mobile menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="min-height: 60vh;">
+    <div class="hero-background">
+      <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #2D2D2D 0%, #000000 100%);"></div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="caption text-gold mb-md">Spring/Summer 2026</p>
+      <h1 class="hero-title">Featured Designers</h1>
+      <p class="hero-subtitle">Visionaries shaping the future of fashion</p>
+    </div>
+  </section>
+
+  <!-- SEARCH & FILTER -->
+  <section class="section bg-ghost pt-4xl">
+    <div class="container-standard">
+      <div class="search-filter-bar">
+        <div class="search-box">
+          <input type="text" class="search-input" placeholder="Search designers by name or style..." id="designerSearch">
+          <button class="btn btn-primary">Search</button>
+        </div>
+        <div class="filter-tags">
+          <button class="filter-tag active" data-filter="all">All</button>
+          <button class="filter-tag" data-filter="womenswear">Womenswear</button>
+          <button class="filter-tag" data-filter="menswear">Menswear</button>
+          <button class="filter-tag" data-filter="unisex">Unisex</button>
+          <button class="filter-tag" data-filter="sustainable">Sustainable</button>
+          <button class="filter-tag" data-filter="couture">Couture</button>
+          <button class="filter-tag" data-filter="streetwear">Streetwear</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIGNERS GRID -->
+  <section class="section bg-ghost pt-0">
+    <div class="container-standard">
+      <div class="designer-grid">
+
+        <!-- Designer 1 -->
+        <article class="designer-card fade-in-up" data-category="womenswear couture">
+          <div class="designer-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=800&fit=crop&crop=faces" alt="Alexandra Chen" class="designer-image" loading="lazy">
+            <div class="designer-overlay">
+              <h3 class="h3">Alexandra Chen</h3>
+            </div>
+          </div>
+          <div class="designer-info">
+            <span class="designer-specialty">Avant-Garde Couture</span>
+            <p class="body-small text-gray mb-md">
+              Known for architectural silhouettes and sustainable luxury fabrics, Alexandra's work has graced international runways and red carpets.
+            </p>
+            <a href="#" class="btn-tertiary">View Collection →</a>
+          </div>
+        </article>
+
+        <!-- Designer 2 -->
+        <article class="designer-card fade-in-up" data-category="menswear streetwear">
+          <div class="designer-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&crop=faces" alt="Marcus Williams" class="designer-image" loading="lazy">
+            <div class="designer-overlay">
+              <h3 class="h3">Marcus Williams</h3>
+            </div>
+          </div>
+          <div class="designer-info">
+            <span class="designer-specialty">Streetwear Luxury</span>
+            <p class="body-small text-gray mb-md">
+              Blending urban culture with high fashion, Marcus creates collections that challenge traditional menswear boundaries.
+            </p>
+            <a href="#" class="btn-tertiary">View Collection →</a>
+          </div>
+        </article>
+
+        <!-- Designer 3 -->
+        <article class="designer-card fade-in-up" data-category="womenswear sustainable">
+          <div class="designer-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=800&fit=crop&crop=faces" alt="Naomi Johnson" class="designer-image" loading="lazy">
+            <div class="designer-overlay">
+              <h3 class="h3">Naomi Johnson</h3>
+            </div>
+          </div>
+          <div class="designer-info">
+            <span class="designer-specialty">Sustainable Fashion</span>
+            <p class="body-small text-gray mb-md">
+              Pioneer in eco-conscious design, Naomi's collections prove that sustainability and style are not mutually exclusive.
+            </p>
+            <a href="#" class="btn-tertiary">View Collection →</a>
+          </div>
+        </article>
+
+        <!-- Designer 4 -->
+        <article class="designer-card fade-in-up" data-category="menswear">
+          <div class="designer-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&h=800&fit=crop&crop=faces" alt="David Martinez" class="designer-image" loading="lazy">
+            <div class="designer-overlay">
+              <h3 class="h3">David Martinez</h3>
+            </div>
+          </div>
+          <div class="designer-info">
+            <span class="designer-specialty">Contemporary Menswear</span>
+            <p class="body-small text-gray mb-md">
+              Reimagining classic tailoring for the modern man, David's precision cuts and luxurious fabrics define contemporary elegance.
+            </p>
+            <a href="#" class="btn-tertiary">View Collection →</a>
+          </div>
+        </article>
+
+        <!-- Designer 5 -->
+        <article class="designer-card fade-in-up" data-category="unisex streetwear">
+          <div class="designer-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&h=800&fit=crop&crop=faces" alt="Sofia Rodriguez" class="designer-image" loading="lazy">
+            <div class="designer-overlay">
+              <h3 class="h3">Sofia Rodriguez</h3>
+            </div>
+          </div>
+          <div class="designer-info">
+            <span class="designer-specialty">Gender-Fluid Design</span>
+            <p class="body-small text-gray mb-md">
+              Breaking down fashion barriers with innovative unisex designs that celebrate individual expression and identity.
+            </p>
+            <a href="#" class="btn-tertiary">View Collection →</a>
+          </div>
+        </article>
+
+        <!-- Designer 6 -->
+        <article class="designer-card fade-in-up" data-category="womenswear">
+          <div class="designer-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&h=800&fit=crop&crop=faces" alt="Jasmine Lee" class="designer-image" loading="lazy">
+            <div class="designer-overlay">
+              <h3 class="h3">Jasmine Lee</h3>
+            </div>
+          </div>
+          <div class="designer-info">
+            <span class="designer-specialty">Modern Femininity</span>
+            <p class="body-small text-gray mb-md">
+              Celebrating feminine power through bold colors, dramatic silhouettes, and intricate detailing that commands attention.
+            </p>
+            <a href="#" class="btn-tertiary">View Collection →</a>
+          </div>
+        </article>
+
+        <!-- Designer 7 -->
+        <article class="designer-card fade-in-up" data-category="menswear sustainable">
+          <div class="designer-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=800&fit=crop&crop=faces" alt="James Thompson" class="designer-image" loading="lazy">
+            <div class="designer-overlay">
+              <h3 class="h3">James Thompson</h3>
+            </div>
+          </div>
+          <div class="designer-info">
+            <span class="designer-specialty">Eco-Luxury Menswear</span>
+            <p class="body-small text-gray mb-md">
+              Merging environmental responsibility with refined aesthetics in collections that redefine sustainable menswear.
+            </p>
+            <a href="#" class="btn-tertiary">View Collection →</a>
+          </div>
+        </article>
+
+        <!-- Designer 8 -->
+        <article class="designer-card fade-in-up" data-category="womenswear couture">
+          <div class="designer-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&h=800&fit=crop&crop=faces" alt="Amara Jackson" class="designer-image" loading="lazy">
+            <div class="designer-overlay">
+              <h3 class="h3">Amara Jackson</h3>
+            </div>
+          </div>
+          <div class="designer-info">
+            <span class="designer-specialty">Heritage Couture</span>
+            <p class="body-small text-gray mb-md">
+              Drawing inspiration from African textiles and traditions, Amara creates contemporary couture with cultural depth.
+            </p>
+            <a href="#" class="btn-tertiary">View Collection →</a>
+          </div>
+        </article>
+
+        <!-- Designer 9 -->
+        <article class="designer-card fade-in-up" data-category="unisex">
+          <div class="designer-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=800&fit=crop&crop=faces" alt="Taylor Kim" class="designer-image" loading="lazy">
+            <div class="designer-overlay">
+              <h3 class="h3">Taylor Kim</h3>
+            </div>
+          </div>
+          <div class="designer-info">
+            <span class="designer-specialty">Minimalist Unisex</span>
+            <p class="body-small text-gray mb-md">
+              Clean lines and neutral palettes define Taylor's approach to timeless, gender-neutral fashion for the conscious consumer.
+            </p>
+            <a href="#" class="btn-tertiary">View Collection →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="section bg-black text-white">
+    <div class="container-narrow text-center">
+      <h2 class="h1 mb-lg">Are You a Designer?</h2>
+      <p class="body-large mb-2xl" style="color: var(--color-silver);">
+        Apply to showcase your collection at the next Noir Fashion Week and join this prestigious roster of talent.
+      </p>
+      <a href="#apply" class="btn btn-primary btn-large">Apply Now</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-noir-black text-white" style="padding: var(--space-4xl) 0 var(--space-xl) 0;">
+    <div class="container">
+      <div class="grid grid-4 gap-xl mb-4xl">
+        <div>
+          <h4 class="h4 mb-lg">NOIR FW</h4>
+          <p class="body-small" style="color: var(--color-silver);">
+            Celebrating diversity and excellence in fashion since 2020.
+          </p>
+        </div>
+
+        <div>
+          <h5 class="caption mb-lg">Quick Links</h5>
+          <ul style="list-style: none;">
+            <li class="mb-sm"><a href="schedule.html" class="body-small" style="color: var(--color-silver);">Schedule</a></li>
+            <li class="mb-sm"><a href="designers.html" class="body-small" style="color: var(--color-silver);">Designers</a></li>
+            <li class="mb-sm"><a href="archive.html" class="body-small" style="color: var(--color-silver);">Archive</a></li>
+            <li class="mb-sm"><a href="press.html" class="body-small" style="color: var(--color-silver);">Press</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="caption mb-lg">Get Involved</h5>
+          <ul style="list-style: none;">
+            <li class="mb-sm"><a href="#apply" class="body-small" style="color: var(--color-silver);">Designer Application</a></li>
+            <li class="mb-sm"><a href="#tickets" class="body-small" style="color: var(--color-silver);">Buy Tickets</a></li>
+            <li class="mb-sm"><a href="#volunteer" class="body-small" style="color: var(--color-silver);">Volunteer</a></li>
+            <li class="mb-sm"><a href="#partner" class="body-small" style="color: var(--color-silver);">Become a Partner</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="caption mb-lg">Follow Us</h5>
+          <ul style="list-style: none;">
+            <li class="mb-sm"><a href="#" class="body-small" style="color: var(--color-silver);">Instagram</a></li>
+            <li class="mb-sm"><a href="#" class="body-small" style="color: var(--color-silver);">Twitter</a></li>
+            <li class="mb-sm"><a href="#" class="body-small" style="color: var(--color-silver);">Facebook</a></li>
+            <li class="mb-sm"><a href="#" class="body-small" style="color: var(--color-silver);">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center pt-xl" style="border-top: 1px solid var(--color-graphite);">
+        <p class="body-small" style="color: var(--color-silver);">
+          &copy; 2025 Noir Fashion Week. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+
+  <!-- Filter Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterTags = document.querySelectorAll('.filter-tag');
+      const designerCards = document.querySelectorAll('.designer-card');
+      const searchInput = document.getElementById('designerSearch');
+
+      // Category filtering
+      filterTags.forEach(tag => {
+        tag.addEventListener('click', function() {
+          filterTags.forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
+
+          const filter = this.dataset.filter;
+
+          designerCards.forEach(card => {
+            if (filter === 'all' || card.dataset.category.includes(filter)) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Search functionality
+      searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+
+        designerCards.forEach(card => {
+          const designerName = card.querySelector('h3').textContent.toLowerCase();
+          const specialty = card.querySelector('.designer-specialty').textContent.toLowerCase();
+          const description = card.querySelector('.body-small').textContent.toLowerCase();
+
+          if (designerName.includes(searchTerm) || specialty.includes(searchTerm) || description.includes(searchTerm)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
