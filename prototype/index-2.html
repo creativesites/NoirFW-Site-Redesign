@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noir Fashion Week - Option 2: Editorial</title>
+  <link rel="stylesheet" href="css/design-system.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--font-body); overflow-x: hidden; }
+
+    /* Simple nav */
+    .simple-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 3rem;
+      z-index: 100;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+    }
+
+    .simple-nav img { height: 30px; }
+
+    .nav-menu {
+      color: white;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 1px solid white;
+    }
+
+    /* Split hero */
+    .split-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100vh;
+    }
+
+    .split-hero-left {
+      background: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6rem;
+      position: relative;
+    }
+
+    .split-hero-left::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,1) 100%);
+      z-index: 0;
+    }
+
+    .split-hero-left > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .split-hero-left h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 300;
+      line-height: 0.95;
+      margin-bottom: 3rem;
+      letter-spacing: -0.02em;
+    }
+
+    .split-hero-left p {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      line-height: 2;
+      opacity: 0.7;
+      max-width: 500px;
+      letter-spacing: 0.1em;
+    }
+
+    .split-hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .split-hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Image text section */
+    .image-text-section {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      min-height: 90vh;
+    }
+
+    .image-text-section img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .text-content {
+      background: white;
+      padding: 8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .text-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+      line-height: 1.2;
+    }
+
+    .text-content p {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .text-content .learn-more {
+      margin-top: 2rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: black;
+      text-decoration: none;
+      border-bottom: 1px solid black;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      transition: opacity 0.3s;
+    }
+
+    .text-content .learn-more:hover {
+      opacity: 0.6;
+    }
+
+    /* Full width image */
+    .full-width-image {
+      height: 70vh;
+      overflow: hidden;
+    }
+
+    .full-width-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* CTA section */
+    .cta-section {
+      background: black;
+      color: white;
+      padding: 10rem 4rem;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 300;
+      margin-bottom: 4rem;
+      line-height: 1.2;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn {
+      padding: 1.25rem 3.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: white;
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: white;
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: -1;
+    }
+
+    .cta-btn:hover {
+      color: black;
+      border-color: white;
+    }
+
+    .cta-btn:hover::before {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .split-hero,
+      .image-text-section {
+        grid-template-columns: 1fr;
+      }
+      .split-hero-left h1 { font-size: 3rem; }
+      .text-content h2 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Simple Navigation -->
+  <nav class="simple-nav">
+    <img src="assets/images/nfw_logo_white22.webp" alt="Noir Fashion Week">
+    <a href="#" class="nav-menu">MENU</a>
+  </nav>
+
+  <!-- Split Hero -->
+  <section class="split-hero">
+    <div class="split-hero-left">
+      <h1>NOIR<br>FASHION<br>WEEK</h1>
+      <p>February 12—15, 2026<br>New York City</p>
+      <a href="schedule.html" class="cta-btn" style="display: inline-block; margin-top: 2rem; width: fit-content;">VIEW SCHEDULE</a>
+    </div>
+    <div class="split-hero-right">
+      <img src="assets/images/FW+2026+DESIGNER+PKG.webp" alt="Noir Fashion Week 2026">
+    </div>
+  </section>
+
+  <!-- Image + Text Section -->
+  <section class="image-text-section">
+    <img src="assets/images/from-noirfw/flaunter-2KbjY_7c7to-unsplash.webp" alt="Fashion Show">
+    <div class="text-content">
+      <p style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.2em; color: #999; margin-bottom: 2rem;">OUR MISSION</p>
+      <h2>Where Diversity Fuels Innovation</h2>
+      <p>
+        Noir Fashion Week Global celebrates diversity, inclusivity, and creative excellence by providing a global platform for emerging and underrepresented designers.
+      </p>
+      <p>
+        Through runways, mentorship, and partnerships, we amplify new voices, connect cultures, and ensure that creativity knows no borders.
+      </p>
+      <a href="#" class="learn-more">LEARN MORE ABOUT US</a>
+    </div>
+  </section>
+
+  <!-- Full Width Image -->
+  <section class="full-width-image">
+    <img src="assets/images/from-noirfw/Nichole+Founder.webp" alt="Featured Designer">
+  </section>
+
+  <!-- Press -->
+  <section style="background: #000; padding: 4rem 2rem; text-align: center;">
+    <p style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 3rem; color: #999;">AS SEEN IN</p>
+    <div style="display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap; align-items: center;">
+      <img src="assets/images/as-seen-in/FORBES22.webp" alt="Forbes" style="height: 25px; opacity: 0.5;">
+      <img src="assets/images/as-seen-in/ESSENCE2.webp" alt="Essence" style="height: 25px; opacity: 0.5;">
+      <img src="assets/images/as-seen-in/cbs2.webp" alt="CBS" style="height: 25px; opacity: 0.5;">
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Join Us This February</h2>
+    <div class="cta-buttons">
+      <a href="#" class="cta-btn">GET TICKETS</a>
+      <a href="#" class="cta-btn">APPLY AS DESIGNER</a>
+    </div>
+  </section>
+
+</body>
+</html>

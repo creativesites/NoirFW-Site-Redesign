@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Noir Fashion Week SS 2026 Schedule - View all runway shows, events, and presentations. Plan your fashion week experience.">
-  <title>Schedule - Noir Fashion Week Spring/Summer 2026</title>
+  <meta name="description" content="Noir Fashion Week FW 2026 Schedule - February 12-15, 2026. View all runway shows, events, and presentations.">
+  <title>Schedule - Noir Fashion Week FW 2026</title>
 
   <!-- Design System CSS -->
   <link rel="stylesheet" href="css/design-system.css">
@@ -35,9 +35,9 @@
 
     .filter-btn:hover,
     .filter-btn.active {
-      border-color: var(--color-gold);
-      background-color: var(--color-gold);
-      color: var(--color-noir-black);
+      border-color: var(--color-noir-black);
+      background-color: var(--color-noir-black);
+      color: var(--color-pure-white);
     }
 
     .schedule-day {
@@ -50,14 +50,14 @@
       gap: 2rem;
       margin-bottom: 2rem;
       padding-bottom: 1rem;
-      border-bottom: 2px solid var(--color-gold);
+      border-bottom: 2px solid var(--color-noir-black);
     }
 
     .day-number {
       font-family: var(--font-display);
       font-size: 4rem;
       font-weight: 700;
-      color: var(--color-gold);
+      color: var(--color-noir-black);
       line-height: 1;
     }
 
@@ -73,7 +73,7 @@
 
     .event-card {
       background: white;
-      border-left: 4px solid var(--color-gold);
+      border-left: 4px solid var(--color-noir-black);
       padding: 2rem;
       margin-bottom: 1.5rem;
       box-shadow: var(--shadow-2);
@@ -132,8 +132,8 @@
     .event-tag {
       display: inline-block;
       padding: 0.25rem 0.75rem;
-      background: var(--color-champagne);
-      color: var(--color-noir-black);
+      background: var(--color-noir-black);
+      color: var(--color-pure-white);
       font-size: 0.75rem;
       font-weight: 600;
       text-transform: uppercase;
@@ -165,7 +165,7 @@
       font-family: var(--font-mono);
       font-size: 3rem;
       font-weight: 500;
-      color: var(--color-gold);
+      color: var(--color-pure-white);
       line-height: 1;
       margin-bottom: 0.5rem;
     }
@@ -208,7 +208,9 @@
   <!-- NAVIGATION -->
   <nav class="navbar">
     <div class="navbar-container">
-      <a href="index.html" class="navbar-logo">NOIR FW</a>
+      <a href="index.html" class="navbar-logo">
+        <img src="assets/images/nfw_logo_white22.webp" alt="Noir Fashion Week" style="height: 40px;">
+      </a>
 
       <ul class="navbar-menu">
         <li><a href="index.html" class="navbar-link">Home</a></li>
@@ -216,7 +218,6 @@
         <li><a href="designers.html" class="navbar-link">Designers</a></li>
         <li><a href="archive.html" class="navbar-link">Archive</a></li>
         <li><a href="press.html" class="navbar-link">Press</a></li>
-        <li><a href="index.html#contact" class="navbar-link">Contact</a></li>
       </ul>
 
       <button class="navbar-mobile-toggle" aria-label="Toggle mobile menu">
@@ -230,21 +231,21 @@
   <!-- HERO -->
   <section class="hero" style="min-height: 60vh;">
     <div class="hero-background">
-      <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #2D2D2D 0%, #000000 100%);"></div>
+      <img src="assets/images/from-noirfw/flaunter-nGKKhltw0ik-unsplash.webp" alt="Fashion Week" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
-      <p class="caption text-gold mb-md">Spring/Summer 2026</p>
+      <p class="caption text-white mb-md">Fall/Winter 2026</p>
       <h1 class="hero-title">Event Schedule</h1>
-      <p class="hero-subtitle">Seven days of extraordinary fashion, innovation, and celebration</p>
+      <p class="hero-subtitle">Four days of extraordinary fashion, innovation, and celebration</p>
     </div>
   </section>
 
   <!-- COUNTDOWN -->
   <section class="countdown-widget">
     <h2 class="h2 mb-md">Event Starts In</h2>
-    <div data-countdown="2026-02-15T19:00:00"></div>
+    <div data-countdown="2026-02-12T11:00:00"></div>
   </section>
 
   <!-- SCHEDULE CONTENT -->
@@ -254,98 +255,143 @@
       <!-- Filters -->
       <div class="schedule-filter">
         <button class="filter-btn active" data-filter="all">All Events</button>
+        <button class="filter-btn" data-filter="summit">Summit</button>
         <button class="filter-btn" data-filter="runway">Runway Shows</button>
-        <button class="filter-btn" data-filter="presentation">Presentations</button>
-        <button class="filter-btn" data-filter="special">Special Events</button>
+        <button class="filter-btn" data-filter="market">Market</button>
         <button class="filter-btn" data-filter="networking">Networking</button>
       </div>
 
-      <!-- DAY 1 - FEBRUARY 15 -->
+      <!-- DAY 1 - FEBRUARY 12 -->
       <div class="schedule-day">
         <div class="day-header">
           <div class="day-number">01</div>
           <div class="day-info">
-            <h3>Opening Night</h3>
-            <p class="mono">Saturday, February 15, 2026</p>
+            <h3>Beyond The Runway</h3>
+            <p class="mono">Wednesday, February 12, 2026</p>
           </div>
         </div>
 
-        <div class="event-card" data-category="special">
+        <div class="event-card" data-category="summit">
           <div class="event-time">
-            <div class="time-display">7:00</div>
-            <div class="time-period">PM</div>
-          </div>
-          <div class="event-details">
-            <span class="event-tag">Special Event</span>
-            <h4>Opening Night Gala</h4>
-            <div class="event-meta">
-              <span class="event-meta-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                Manhattan Center - Grand Ballroom
-              </span>
-              <span class="event-meta-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-                VIP Only
-              </span>
-            </div>
-            <p class="body-small">
-              Kick off Noir Fashion Week with an exclusive gala featuring cocktails, live entertainment, and a preview of this season's top designers. Red carpet arrivals begin at 6:00 PM.
-            </p>
-          </div>
-          <div>
-            <a href="#" class="btn btn-secondary-dark btn-small">RSVP</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- DAY 2 - FEBRUARY 16 -->
-      <div class="schedule-day">
-        <div class="day-header">
-          <div class="day-number">02</div>
-          <div class="day-info">
-            <h3>Designer Showcases Begin</h3>
-            <p class="mono">Sunday, February 16, 2026</p>
-          </div>
-        </div>
-
-        <div class="event-card" data-category="runway">
-          <div class="event-time">
-            <div class="time-display">10:00</div>
+            <div class="time-display">11:00</div>
             <div class="time-period">AM</div>
           </div>
           <div class="event-details">
-            <span class="event-tag">Runway Show</span>
-            <h4>Alexandra Chen - "Ethereal Dreams"</h4>
+            <span class="event-tag">Summit</span>
+            <h4>Global Fashion Summit: "Defining the Future of Fashion Together"</h4>
             <div class="event-meta">
               <span class="event-meta-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
-                Spring Studios - Stage 6
+                45 W. 29th St., New York
               </span>
               <span class="event-meta-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="12" cy="12" r="10"></circle>
                   <polyline points="12 6 12 12 16 14"></polyline>
                 </svg>
-                45 minutes
+                6 hours (11am-5pm)
+              </span>
+              <span class="event-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                </svg>
+                50 Seats Only
               </span>
             </div>
             <p class="body-small">
-              Experience avant-garde couture as Alexandra Chen debuts her SS26 collection featuring sustainable fabrics and architectural silhouettes.
+              Join industry leaders, designers, and innovators for a comprehensive summit exploring the future of global fashion. Topics include sustainability, diversity in luxury, emerging markets, and technological innovation. Full itinerary available upon registration.
             </p>
           </div>
           <div>
-            <a href="designers.html" class="btn btn-secondary-dark btn-small">Details</a>
+            <a href="#register" class="btn btn-secondary-dark btn-small">Register</a>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="networking">
+          <div class="event-time">
+            <div class="time-display">7:00</div>
+            <div class="time-period">PM</div>
+          </div>
+          <div class="event-details">
+            <span class="event-tag">Networking</span>
+            <h4>Power 30</h4>
+            <div class="event-meta">
+              <span class="event-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Brooklyn Chop House, Times Square
+              </span>
+              <span class="event-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                2 hours (7pm-9pm)
+              </span>
+              <span class="event-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                </svg>
+                Invite Only
+              </span>
+            </div>
+            <p class="body-small">
+              An exclusive evening gathering of fashion's most influential leaders, designers, and decision-makers. Curated networking, fine dining, and intimate conversations about the future of the industry.
+            </p>
+          </div>
+          <div>
+            <a href="#invite" class="btn btn-secondary-dark btn-small">Request Invite</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 2 - FEBRUARY 13 -->
+      <div class="schedule-day">
+        <div class="day-header">
+          <div class="day-number">02</div>
+          <div class="day-info">
+            <h3>Designer Showcases Begin</h3>
+            <p class="mono">Thursday, February 13, 2026</p>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="market">
+          <div class="event-time">
+            <div class="time-display">10:00</div>
+            <div class="time-period">AM</div>
+          </div>
+          <div class="event-details">
+            <span class="event-tag">Market</span>
+            <h4>Noir Locale Market</h4>
+            <div class="event-meta">
+              <span class="event-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                45 W. 29th St., New York
+              </span>
+              <span class="event-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                4 hours (10am-2pm)
+              </span>
+            </div>
+            <p class="body-small">
+              Shop directly from emerging BIPOC designers. Discover unique pieces, meet the creators, and support independent fashion talent. First day of our two-day marketplace experience.
+            </p>
+          </div>
+          <div>
+            <a href="#tickets" class="btn btn-secondary-dark btn-small">Get Tickets</a>
           </div>
         </div>
 
@@ -355,48 +401,81 @@
             <div class="time-period">PM</div>
           </div>
           <div class="event-details">
-            <span class="event-tag">Runway Show</span>
-            <h4>Marcus Williams - "Urban Renaissance"</h4>
+            <span class="event-tag">Private Showing</span>
+            <h4>Private Designer Showing</h4>
             <div class="event-meta">
               <span class="event-meta-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
-                Spring Studios - Stage 6
+                45 W. 29th St., New York
+              </span>
+              <span class="event-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                </svg>
+                VIP Access
+              </span>
+            </div>
+            <p class="body-small">
+              Intimate presentation format allowing buyers and press to view collections up close. Exclusive access for VIP ticket holders and industry professionals.
+            </p>
+          </div>
+          <div>
+            <a href="#vip" class="btn btn-secondary-dark btn-small">VIP Access</a>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="runway">
+          <div class="event-time">
+            <div class="time-display">4:00</div>
+            <div class="time-period">PM</div>
+          </div>
+          <div class="event-details">
+            <span class="event-tag">Runway Show</span>
+            <h4>Emerging Designer Collective</h4>
+            <div class="event-meta">
+              <span class="event-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                45 W. 29th St., New York
               </span>
               <span class="event-meta-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="12" cy="12" r="10"></circle>
                   <polyline points="12 6 12 12 16 14"></polyline>
                 </svg>
-                50 minutes
+                90 minutes
               </span>
             </div>
             <p class="body-small">
-              Marcus Williams blends streetwear and luxury in this high-energy presentation featuring bold graphics and innovative textiles.
+              Spotlight on rising talent. Experience the bold visions of emerging designers making their mark on the global fashion stage. Multiple designer presentations in runway format.
             </p>
           </div>
           <div>
-            <a href="designers.html" class="btn btn-secondary-dark btn-small">Details</a>
+            <a href="#tickets" class="btn btn-secondary-dark btn-small">Get Tickets</a>
           </div>
         </div>
 
-        <div class="event-card" data-category="networking">
+        <div class="event-card" data-category="runway">
           <div class="event-time">
             <div class="time-display">6:00</div>
             <div class="time-period">PM</div>
           </div>
           <div class="event-details">
-            <span class="event-tag">Networking</span>
-            <h4>Industry Mixer - Designers Meet Buyers</h4>
+            <span class="event-tag">Runway Show</span>
+            <h4>International Collective</h4>
             <div class="event-meta">
               <span class="event-meta-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
-                The Standard Hotel - Rooftop
+                45 W. 29th St., New York
               </span>
               <span class="event-meta-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -407,100 +486,200 @@
               </span>
             </div>
             <p class="body-small">
-              Connect with industry professionals, buyers, and media in an intimate rooftop setting. Cocktails and light bites provided.
+              Global fashion convergence. Designers from Africa, Europe, Americas, and Asia showcase collections that celebrate cultural heritage and contemporary innovation.
             </p>
           </div>
           <div>
-            <a href="#" class="btn btn-secondary-dark btn-small">Register</a>
+            <a href="#tickets" class="btn btn-secondary-dark btn-small">Get Tickets</a>
           </div>
         </div>
       </div>
 
-      <!-- DAY 3 - FEBRUARY 17 -->
+      <!-- DAY 3 - FEBRUARY 14 -->
       <div class="schedule-day">
         <div class="day-header">
           <div class="day-number">03</div>
           <div class="day-info">
-            <h3>Emerging Talent Day</h3>
-            <p class="mono">Monday, February 17, 2026</p>
+            <h3>Pret-A-Porter Day</h3>
+            <p class="mono">Friday, February 14, 2026</p>
           </div>
         </div>
 
-        <div class="event-card" data-category="presentation">
+        <div class="event-card" data-category="market">
+          <div class="event-time">
+            <div class="time-display">10:00</div>
+            <div class="time-period">AM</div>
+          </div>
+          <div class="event-details">
+            <span class="event-tag">Market</span>
+            <h4>Noir Locale Market - Day 2</h4>
+            <div class="event-meta">
+              <span class="event-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                45 W. 29th St., New York
+              </span>
+              <span class="event-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                4 hours (10am-2pm)
+              </span>
+            </div>
+            <p class="body-small">
+              Final day of the marketplace. Last chance to shop exclusive pieces from BIPOC designers before the collections move to retail partners.
+            </p>
+          </div>
+          <div>
+            <a href="#tickets" class="btn btn-secondary-dark btn-small">Get Tickets</a>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="runway">
+          <div class="event-time">
+            <div class="time-display">2:00</div>
+            <div class="time-period">PM</div>
+          </div>
+          <div class="event-details">
+            <span class="event-tag">Runway Show</span>
+            <h4>Pret-A-Porter Collective</h4>
+            <div class="event-meta">
+              <span class="event-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                45 W. 29th St., New York
+              </span>
+              <span class="event-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                2 hours
+              </span>
+            </div>
+            <p class="body-small">
+              Ready-to-wear collections that bridge high fashion and everyday luxury. Wearable art from designers focused on commercial viability without compromising creativity.
+            </p>
+          </div>
+          <div>
+            <a href="#tickets" class="btn btn-secondary-dark btn-small">Get Tickets</a>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="runway">
+          <div class="event-time">
+            <div class="time-display">6:00</div>
+            <div class="time-period">PM</div>
+          </div>
+          <div class="event-details">
+            <span class="event-tag">Private Showing</span>
+            <h4>Private Designer Showing - Session 1</h4>
+            <div class="event-meta">
+              <span class="event-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                45 W. 29th St., New York
+              </span>
+              <span class="event-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                </svg>
+                VIP Access
+              </span>
+            </div>
+            <p class="body-small">
+              Intimate evening presentation for buyers, press, and VIP attendees. Direct access to designers and exclusive first looks at collections.
+            </p>
+          </div>
+          <div>
+            <a href="#vip" class="btn btn-secondary-dark btn-small">VIP Access</a>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="runway">
+          <div class="event-time">
+            <div class="time-display">8:00</div>
+            <div class="time-period">PM</div>
+          </div>
+          <div class="event-details">
+            <span class="event-tag">Private Showing</span>
+            <h4>Private Designer Showing - Session 2</h4>
+            <div class="event-meta">
+              <span class="event-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                45 W. 29th St., New York
+              </span>
+              <span class="event-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                </svg>
+                VIP Access
+              </span>
+            </div>
+            <p class="body-small">
+              Second session of private presentations. Additional designers showcase their work in an exclusive, curated environment.
+            </p>
+          </div>
+          <div>
+            <a href="#vip" class="btn btn-secondary-dark btn-small">VIP Access</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 4 - FEBRUARY 15 -->
+      <div class="schedule-day">
+        <div class="day-header">
+          <div class="day-number">04</div>
+          <div class="day-info">
+            <h3>Celebration Day</h3>
+            <p class="mono">Saturday, February 15, 2026</p>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="networking">
           <div class="event-time">
             <div class="time-display">11:00</div>
             <div class="time-period">AM</div>
           </div>
           <div class="event-details">
-            <span class="event-tag">Presentation</span>
-            <h4>New Designers Showcase - Part 1</h4>
+            <span class="event-tag">Celebration</span>
+            <h4>Meet Us for Brunch in Harlem</h4>
             <div class="event-meta">
               <span class="event-meta-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
-                Noir Showroom - Chelsea
+                Harlem, New York
               </span>
               <span class="event-meta-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
                 </svg>
-                6 Designers
+                3 hours
               </span>
             </div>
             <p class="body-small">
-              Discover tomorrow's fashion leaders in this intimate presentation format. Meet the designers and view collections up close.
+              Celebrate the week's success with the Noir Fashion Week community. Casual brunch gathering in historic Harlem to reflect, connect, and toast to the future of fashion. Open to all ticket holders and participants.
             </p>
           </div>
           <div>
-            <a href="designers.html" class="btn btn-secondary-dark btn-small">Details</a>
+            <a href="#rsvp" class="btn btn-secondary-dark btn-small">RSVP</a>
           </div>
         </div>
-
-        <div class="event-card" data-category="presentation">
-          <div class="event-time">
-            <div class="time-display">3:00</div>
-            <div class="time-period">PM</div>
-          </div>
-          <div class="event-details">
-            <span class="event-tag">Presentation</span>
-            <h4>New Designers Showcase - Part 2</h4>
-            <div class="event-meta">
-              <span class="event-meta-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                Noir Showroom - Chelsea
-              </span>
-              <span class="event-meta-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-                6 Designers
-              </span>
-            </div>
-            <p class="body-small">
-              The second session of emerging talent presentations featuring innovative designs from fresh perspectives.
-            </p>
-          </div>
-          <div>
-            <a href="designers.html" class="btn btn-secondary-dark btn-small">Details</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- More days would continue here -->
-      <div class="text-center mt-4xl">
-        <p class="body-large text-gray mb-xl">More events to be announced soon</p>
-        <a href="#" class="btn btn-primary btn-large">Download Full Schedule PDF</a>
       </div>
 
     </div>
@@ -511,9 +690,12 @@
     <div class="container-narrow text-center">
       <h2 class="h1 mb-lg">Don't Miss Out</h2>
       <p class="body-large mb-2xl" style="color: var(--color-silver);">
-        Secure your tickets now to experience the best of fashion innovation.
+        Secure your tickets now to experience the best of global fashion innovation.
       </p>
-      <a href="#tickets" class="btn btn-primary btn-large">Get Tickets</a>
+      <div class="d-flex justify-center gap-md" style="flex-wrap: wrap;">
+        <a href="#early-bird" class="btn btn-primary btn-large">Early Bird - $97</a>
+        <a href="#vip" class="btn btn-secondary btn-large">VIP Access - $157</a>
+      </div>
     </div>
   </section>
 
@@ -522,9 +704,9 @@
     <div class="container">
       <div class="grid grid-4 gap-xl mb-4xl">
         <div>
-          <h4 class="h4 mb-lg">NOIR FW</h4>
+          <img src="assets/images/nfw_logo_white22.webp" alt="Noir Fashion Week" style="height: 50px; margin-bottom: 1.5rem;">
           <p class="body-small" style="color: var(--color-silver);">
-            Celebrating diversity and excellence in fashion since 2020.
+            Celebrating diversity, inclusivity, and creative excellence since 2020.
           </p>
         </div>
 
@@ -532,7 +714,7 @@
           <h5 class="caption mb-lg">Quick Links</h5>
           <ul style="list-style: none;">
             <li class="mb-sm"><a href="schedule.html" class="body-small" style="color: var(--color-silver);">Schedule</a></li>
-            <li class="mb-sm"><a href="designers.html" class="body-small" style="color: var(--color-silver);">Designers</a></li>
+            <li class="mb-sm"><a href="index.html#why-noir" class="body-small" style="color: var(--color-silver);">Why Noir</a></li>
             <li class="mb-sm"><a href="archive.html" class="body-small" style="color: var(--color-silver);">Archive</a></li>
             <li class="mb-sm"><a href="press.html" class="body-small" style="color: var(--color-silver);">Press</a></li>
           </ul>
@@ -561,7 +743,7 @@
 
       <div class="text-center pt-xl" style="border-top: 1px solid var(--color-graphite);">
         <p class="body-small" style="color: var(--color-silver);">
-          &copy; 2025 Noir Fashion Week. All rights reserved.
+          &copy; 2025 Noir Fashion Week Global. All rights reserved. | Founded by Nichole M. Bess
         </p>
       </div>
     </div>
